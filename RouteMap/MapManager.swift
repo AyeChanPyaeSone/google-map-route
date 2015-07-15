@@ -27,17 +27,18 @@ import CoreLocation
 import MapKit
 
 
-typealias DirectionsCompletionHandler = ((route:MKPolyline?, directionInformation:NSDictionary?, boundingRegion:MKMapRect?, error:String?)->())?
+
 
 // TODO: Documentation
 
-class MapManager: NSObject{
+public class MapManager: NSObject{
     
+    public typealias DirectionsCompletionHandler = ((route:MKPolyline?, directionInformation:NSDictionary?, boundingRegion:MKMapRect?, error:String?)->())?
     
-    private var directionsCompletionHandler:DirectionsCompletionHandler
-    private let errorNoRoutesAvailable = "No routes available"// add more error handling
+    public var directionsCompletionHandler:DirectionsCompletionHandler
+    public let errorNoRoutesAvailable = "No routes available"// add more error handling
     
-    private let errorDictionary = ["NOT_FOUND" : "At least one of the locations specified in the request's origin, destination, or waypoints could not be geocoded",
+    public let errorDictionary = ["NOT_FOUND" : "At least one of the locations specified in the request's origin, destination, or waypoints could not be geocoded",
         "ZERO_RESULTS":"No route could be found between the origin and destination",
         "MAX_WAYPOINTS_EXCEEDED":"Too many waypointss were provided in the request The maximum allowed waypoints is 8, plus the origin, and destination",
         "INVALID_REQUEST":"The provided request was invalid. Common causes of this status include an invalid parameter or parameter value",
@@ -52,9 +53,10 @@ class MapManager: NSObject{
         
     }
     
-    func directions(#from:CLLocationCoordinate2D,to:NSString,directionCompletionHandler:DirectionsCompletionHandler){
+    
+    public func directions(from:CLLocationCoordinate2D,to:NSString,((route:MKPolyline?, directionInformation:NSDictionary?, boundingRegion:MKMapRect?, error:String?)->())){
         
-        self.directionsCompletionHandler = directionCompletionHandler
+        //self.directionsCompletionHandler = directionCompletionHandler
         
         var geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(to as String, completionHandler: { (placemarksObject, error) -> Void in
@@ -76,7 +78,7 @@ class MapManager: NSObject{
                 var placemarkDestination = MKPlacemark(placemark: placemark)
                 var destination = MKMapItem(placemark: placemarkDestination)
                 
-                self.directionsFor(source: source, destination: destination, directionCompletionHandler: directionCompletionHandler)
+               // self.directionsFor(source, destination: destination, directionCompletionHandler: directionCompletionHandler)
                 
                 
             }
@@ -85,7 +87,7 @@ class MapManager: NSObject{
     }
     
     
-    func directionsFromCurrentLocation(#to:NSString,directionCompletionHandler:DirectionsCompletionHandler){
+    public func directionsFromCurrentLocation(to:NSString,directionCompletionHandler:((route:MKPolyline?, directionInformation:NSDictionary?, boundingRegion:MKMapRect?, error:String?)->())){
         
         self.directionsCompletionHandler = directionCompletionHandler
         
@@ -106,7 +108,7 @@ class MapManager: NSObject{
                 var placemarkDestination = MKPlacemark(placemark: placemark)
                 var destination = MKMapItem(placemark: placemarkDestination)
                 
-                self.directionsFor(source: source, destination: destination, directionCompletionHandler: directionCompletionHandler)
+                self.directionsFor(source, destination: destination, directionCompletionHandler: directionCompletionHandler)
                 
                 
             }
@@ -115,7 +117,7 @@ class MapManager: NSObject{
     }
     
     
-    func directionsFromCurrentLocation(#to:CLLocationCoordinate2D,directionCompletionHandler:DirectionsCompletionHandler){
+    public func directionsFromCurrentLocation(to:CLLocationCoordinate2D,directionCompletionHandler:DirectionsCompletionHandler){
         
         var directionRequest = MKDirectionsRequest()
         
@@ -124,11 +126,11 @@ class MapManager: NSObject{
         
         var destination = MKMapItem(placemark: placemarkDestination)
         
-        directionsFor(source: source, destination: destination, directionCompletionHandler: directionCompletionHandler)
+        directionsFor(source, destination: destination, directionCompletionHandler: directionCompletionHandler)
         
     }
     
-    func directions(#from:CLLocationCoordinate2D, to:CLLocationCoordinate2D,directionCompletionHandler:DirectionsCompletionHandler){
+   public func directions(from:CLLocationCoordinate2D, to:CLLocationCoordinate2D,directionCompletionHandler:DirectionsCompletionHandler){
         
         var directionRequest = MKDirectionsRequest()
         var placemarkSource = MKPlacemark(coordinate: from, addressDictionary: nil)
@@ -137,11 +139,11 @@ class MapManager: NSObject{
         
         var destination = MKMapItem(placemark: placemarkDestination)
         
-        directionsFor(source: source, destination: destination, directionCompletionHandler: directionCompletionHandler)
+        directionsFor(source, destination: destination, directionCompletionHandler: directionCompletionHandler)
         
     }
     
-    private func directionsFor(#source:MKMapItem, destination:MKMapItem,directionCompletionHandler:DirectionsCompletionHandler){
+   public func directionsFor(source:MKMapItem, destination:MKMapItem,directionCompletionHandler:DirectionsCompletionHandler){
         
         self.directionsCompletionHandler = directionCompletionHandler
         
@@ -222,30 +224,30 @@ class MapManager: NSObject{
     
     */
     
-    func directionsUsingGoogle(#from:NSString, to:NSString,directionCompletionHandler:DirectionsCompletionHandler){
+   public func directionsUsingGoogle(from:NSString, to:NSString,directionCompletionHandler:DirectionsCompletionHandler){
         
-        getDirectionsUsingGoogle(origin: from, destination: to, directionCompletionHandler: directionCompletionHandler)
+        getDirectionsUsingGoogle(from, destination: to, directionCompletionHandler: directionCompletionHandler)
         
     }
     
-    func directionsUsingGoogle(#from:CLLocationCoordinate2D, to:CLLocationCoordinate2D,directionCompletionHandler:DirectionsCompletionHandler){
+   public func directionsUsingGoogle(from:CLLocationCoordinate2D, to:CLLocationCoordinate2D,directionCompletionHandler:DirectionsCompletionHandler){
         
         var originLatLng = "\(from.latitude),\(from.longitude)"
         var destinationLatLng = "\(to.latitude),\(to.longitude)"
         
-        getDirectionsUsingGoogle(origin: originLatLng, destination: destinationLatLng, directionCompletionHandler: directionCompletionHandler)
+        getDirectionsUsingGoogle(originLatLng, destination: destinationLatLng, directionCompletionHandler: directionCompletionHandler)
         
     }
     
-    func directionsUsingGoogle(#from:CLLocationCoordinate2D, to:NSString,directionCompletionHandler:DirectionsCompletionHandler){
+   public func directionsUsingGoogle(from:CLLocationCoordinate2D, to:NSString,directionCompletionHandler:DirectionsCompletionHandler){
         
         var originLatLng = "\(from.latitude),\(from.longitude)"
         
-        getDirectionsUsingGoogle(origin: originLatLng, destination: to, directionCompletionHandler: directionCompletionHandler)
+        getDirectionsUsingGoogle(originLatLng, destination: to, directionCompletionHandler: directionCompletionHandler)
         
     }
     
-    private func getDirectionsUsingGoogle(#origin:NSString, destination:NSString,directionCompletionHandler:DirectionsCompletionHandler){
+    private func getDirectionsUsingGoogle(origin:NSString, destination:NSString,directionCompletionHandler:DirectionsCompletionHandler){
         
         self.directionsCompletionHandler = directionCompletionHandler
         
@@ -255,7 +257,7 @@ class MapManager: NSObject{
     }
     
     
-    private func performOperationForURL(urlString:NSString){
+    public func performOperationForURL(urlString:NSString){
         
         let urlEncoded = urlString.stringByReplacingOccurrencesOfString(" ", withString: "%20")
         
@@ -324,7 +326,7 @@ class MapManager: NSObject{
     
     
     
-    private func decodePolyLine(encodedStr:NSString)->Array<CLLocation>{
+    public func decodePolyLine(encodedStr:NSString)->Array<CLLocation>{
         
         var array = Array<CLLocation>()
         let len = encodedStr.length
@@ -405,7 +407,7 @@ class MapManager: NSObject{
         
     }
     
-    private func parser(data:NSDictionary)->NSDictionary{
+    public func parser(data:NSDictionary)->NSDictionary{
         
         var dict = NSMutableDictionary()
         var distance = (data.objectForKey("distance") as! NSDictionary).objectForKey("text") as! NSString
@@ -462,7 +464,7 @@ class MapManager: NSObject{
         
     }
     
-    private func removeHTMLTags(source:NSString)->NSString{
+    public func removeHTMLTags(source:NSString)->NSString{
         
         var range = NSMakeRange(0, 0)
         let HTMLTags = "<[^>]*>"
@@ -480,3 +482,4 @@ class MapManager: NSObject{
     }
     
 }
+

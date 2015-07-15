@@ -18,6 +18,7 @@
 #import "MZFormSheetPresentationControllerSegue.h"
 #import "RouteMap-Swift.h"
 #import "GMDirectionService.h"
+#import "PageMenuViewContoller.h"
 @import CoreLocation;
 @import GoogleMaps;
 
@@ -47,6 +48,10 @@ static const CGFloat DefaultZoom = 11.0f;
     [[MZFormSheetPresentationController appearance] setBackgroundColor:[[UIColor darkGrayColor] colorWithAlphaComponent:0.3]];
     
     self.title = @"Map Demo";
+    
+    MapManager *mapManager = [[MapManager alloc]init];
+    
+
     self.calloutView = [[SMCalloutView alloc] init];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     [button addTarget:self
@@ -317,8 +322,10 @@ static const CGFloat DefaultZoom = 11.0f;
     }
 }
 - (IBAction)showFilterView:(id)sender {
+    
     MapFilterViewController *mapFilterVC = [[MapFilterViewController alloc] init];
     MZFormSheetPresentationController *formSheetController = [[MZFormSheetPresentationController alloc] initWithContentViewController:mapFilterVC];
+    
 //    formSheetController.shouldApplyBackgroundBlurEffect = YES;
   //  formSheetController.blurEffectStyle = UIBlurEffectStyleExtraLight;
     formSheetController.shouldDismissOnBackgroundViewTap = YES;
@@ -345,18 +352,32 @@ static const CGFloat DefaultZoom = 11.0f;
 }
 
 -(void)showDetailPopup{
-   // rgb(242, 242, 242)
-   UIView *view = [[UIView alloc] initWithFrame:CGRectMake(5, 60, self.view.bounds.size.width - 5, self.view.bounds.size.height - 100)];
-    view.backgroundColor = [UIColor colorWithRed:(242/255.0) green:(242/255.0) blue:(242/255.0) alpha:1] ;
-    view.layer.cornerRadius = 8;
-    view.layer.masksToBounds = YES;
-    // Show in popup
-    KLCPopupLayout layout =  KLCPopupLayoutMake(KLCPopupHorizontalLayoutCenter, KLCPopupVerticalLayoutBelowCenter);
     
-    KLCPopup* popup = [KLCPopup popupWithContentView:view showType:KLCPopupShowTypeBounceInFromBottom dismissType:KLCPopupShowTypeBounceInFromTop maskType:KLCPopupMaskTypeDimmed dismissOnBackgroundTouch:YES dismissOnContentTouch:NO];
+    PageMenuViewContoller *testVC = [[PageMenuViewContoller alloc]initWithNibName:@"PageMenuViewContoller" bundle:nil];
+    MZFormSheetPresentationController *formSheetController = [[MZFormSheetPresentationController alloc] initWithContentViewController:testVC];
     
+    //    formSheetController.shouldApplyBackgroundBlurEffect = YES;
+    //  formSheetController.blurEffectStyle = UIBlurEffectStyleExtraLight;
+    formSheetController.shouldDismissOnBackgroundViewTap = YES;
+    formSheetController.contentViewControllerTransitionStyle = MZFormSheetPresentationTransitionStyleSlideFromBottom;
+    formSheetController.contentViewSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height - 150);
+    formSheetController.contentViewController.view.frame = CGRectMake(0, 105, formSheetController.contentViewSize.width, formSheetController.contentViewSize.height);
+    __weak MZFormSheetPresentationController *weakController = formSheetController;
+    formSheetController.willPresentContentViewControllerHandler = ^(UIViewController *a) {
+        weakController.contentViewController.view.layer.masksToBounds = NO;
+        
+        CALayer *layer = weakController.contentViewController.view.layer;
+        
+        [layer setShadowOffset:CGSizeMake(0, 3)];
+        [layer setShadowOpacity:0.8];
+        [layer setShadowRadius:3.0f];
+        
+        [layer setShadowPath:
+         [[UIBezierPath bezierPathWithRoundedRect:[weakController.contentViewController.view bounds]
+                                     cornerRadius:12.0f] CGPath]];
+    };
     
-        [popup showWithLayout:layout];
+    [self presentViewController:formSheetController animated:YES completion:nil];
 
 
 }
