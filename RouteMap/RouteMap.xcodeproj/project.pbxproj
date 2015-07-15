@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		381054E7BB7841254E6FDA20 /* libPods-RouteMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A60515A981ECD84F7F55DE35 /* libPods-RouteMap.a */; };
+		6D1295241B55689400FCDA1A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1295231B55689400FCDA1A /* QuartzCore.framework */; };
+		6D1295281B556E4300FCDA1A /* MapFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1295271B556E4300FCDA1A /* MapFilterViewController.m */; };
+		6D12952A1B5572EC00FCDA1A /* List Filled-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D1295291B5572EC00FCDA1A /* List Filled-32.png */; };
+		6D1295351B55875500FCDA1A /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1295341B55875500FCDA1A /* MapManager.swift */; };
+		6D22CAAB1B5513E80007A3CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D22CAAA1B5513E80007A3CD /* main.m */; };
+		6D22CAAE1B5513E80007A3CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D22CAAD1B5513E80007A3CD /* AppDelegate.m */; };
+		6D22CAB11B5513E80007A3CD /* RouteMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D22CAAF1B5513E80007A3CD /* RouteMap.xcdatamodeld */; };
+		6D22CAB41B5513E80007A3CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D22CAB31B5513E80007A3CD /* ViewController.m */; };
+		6D22CAB71B5513E80007A3CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D22CAB51B5513E80007A3CD /* Main.storyboard */; };
+		6D22CAB91B5513E80007A3CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D22CAB81B5513E80007A3CD /* Images.xcassets */; };
+		6D22CABC1B5513E80007A3CD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D22CABA1B5513E80007A3CD /* LaunchScreen.xib */; };
+		6D22CAC81B5513E80007A3CD /* RouteMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D22CAC71B5513E80007A3CD /* RouteMapTests.m */; };
+		6D22CAD31B551CE70007A3CD /* Restaurant Building Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D22CAD11B551CE70007A3CD /* Restaurant Building Filled-25.png */; };
+		6D22CAD41B551CE70007A3CD /* School Crossing Patrol Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D22CAD21B551CE70007A3CD /* School Crossing Patrol Filled-25.png */; };
+		6D22CAD71B551F160007A3CD /* Pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D22CAD51B551F160007A3CD /* Pin.png */; };
+		6D22CAD81B551F160007A3CD /* Pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D22CAD61B551F160007A3CD /* Pin@2x.png */; };
+		6D22CADC1B5532F90007A3CD /* steering_wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D22CAD91B5532F90007A3CD /* steering_wheel.png */; };
+		6D22CADD1B5532F90007A3CD /* steering_wheel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D22CADA1B5532F90007A3CD /* steering_wheel@2x.png */; };
+		6D22CADE1B5532F90007A3CD /* steering_wheel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D22CADB1B5532F90007A3CD /* steering_wheel@3x.png */; };
+		6D22CAE01B5534190007A3CD /* More Filled-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D22CADF1B5534190007A3CD /* More Filled-25.png */; };
+		6D22CAE21B5534BC0007A3CD /* More-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D22CAE11B5534BC0007A3CD /* More-25.png */; };
+		6D22CAE41B554CB10007A3CD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D22CAE31B554CB10007A3CD /* CoreLocation.framework */; };
+		6DF09ED51B56164B007A8BF2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF09ED41B56164B007A8BF2 /* AVFoundation.framework */; };
+		6DF09ED71B561657007A8BF2 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF09ED61B561657007A8BF2 /* GLKit.framework */; };
+		6DF09ED91B561660007A8BF2 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF09ED81B561660007A8BF2 /* CoreText.framework */; };
+		6DF09EDB1B56166A007A8BF2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF09EDA1B56166A007A8BF2 /* ImageIO.framework */; };
+		6DF09EDD1B561675007A8BF2 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF09EDC1B561675007A8BF2 /* libc++.dylib */; };
+		6DF09EDF1B56167F007A8BF2 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF09EDE1B56167F007A8BF2 /* libicucore.dylib */; };
+		6DF09EE11B561688007A8BF2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF09EE01B561688007A8BF2 /* libz.dylib */; };
+		6DF09EE31B561691007A8BF2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF09EE21B561691007A8BF2 /* OpenGLES.framework */; };
+		6DF09EE51B5616A9007A8BF2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF09EE41B5616A9007A8BF2 /* SystemConfiguration.framework */; };
+		6DF09EE71B563B2D007A8BF2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF09EE61B563B2D007A8BF2 /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D22CAC21B5513E80007A3CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D22CA9D1B5513E80007A3CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D22CAA41B5513E80007A3CD;
+			remoteInfo = RouteMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6D1295231B55689400FCDA1A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6D1295261B556E4300FCDA1A /* MapFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapFilterViewController.h; sourceTree = "<group>"; };
+		6D1295271B556E4300FCDA1A /* MapFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapFilterViewController.m; sourceTree = "<group>"; };
+		6D1295291B5572EC00FCDA1A /* List Filled-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "List Filled-32.png"; sourceTree = "<group>"; };
+		6D1295331B55875400FCDA1A /* RouteMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RouteMap-Bridging-Header.h"; sourceTree = "<group>"; };
+		6D1295341B55875500FCDA1A /* MapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		6D22CAA51B5513E80007A3CD /* RouteMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouteMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D22CAA91B5513E80007A3CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D22CAAA1B5513E80007A3CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D22CAAC1B5513E80007A3CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6D22CAAD1B5513E80007A3CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6D22CAB01B5513E80007A3CD /* RouteMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RouteMap.xcdatamodel; sourceTree = "<group>"; };
+		6D22CAB21B5513E80007A3CD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6D22CAB31B5513E80007A3CD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6D22CAB61B5513E80007A3CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D22CAB81B5513E80007A3CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6D22CABB1B5513E80007A3CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6D22CAC11B5513E80007A3CD /* RouteMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouteMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D22CAC61B5513E80007A3CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D22CAC71B5513E80007A3CD /* RouteMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouteMapTests.m; sourceTree = "<group>"; };
+		6D22CAD11B551CE70007A3CD /* Restaurant Building Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Restaurant Building Filled-25.png"; sourceTree = "<group>"; };
+		6D22CAD21B551CE70007A3CD /* School Crossing Patrol Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "School Crossing Patrol Filled-25.png"; sourceTree = "<group>"; };
+		6D22CAD51B551F160007A3CD /* Pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pin.png; sourceTree = "<group>"; };
+		6D22CAD61B551F160007A3CD /* Pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pin@2x.png"; sourceTree = "<group>"; };
+		6D22CAD91B5532F90007A3CD /* steering_wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steering_wheel.png; sourceTree = "<group>"; };
+		6D22CADA1B5532F90007A3CD /* steering_wheel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "steering_wheel@2x.png"; sourceTree = "<group>"; };
+		6D22CADB1B5532F90007A3CD /* steering_wheel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "steering_wheel@3x.png"; sourceTree = "<group>"; };
+		6D22CADF1B5534190007A3CD /* More Filled-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More Filled-25.png"; sourceTree = "<group>"; };
+		6D22CAE11B5534BC0007A3CD /* More-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More-25.png"; sourceTree = "<group>"; };
+		6D22CAE31B554CB10007A3CD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6DF09ED41B56164B007A8BF2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6DF09ED61B561657007A8BF2 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		6DF09ED81B561660007A8BF2 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		6DF09EDA1B56166A007A8BF2 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		6DF09EDC1B561675007A8BF2 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		6DF09EDE1B56167F007A8BF2 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		6DF09EE01B561688007A8BF2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6DF09EE21B561691007A8BF2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6DF09EE41B5616A9007A8BF2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6DF09EE61B563B2D007A8BF2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		74ED370C2D3F0610A1B596DF /* Pods-RouteMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RouteMap/Pods-RouteMap.debug.xcconfig"; sourceTree = "<group>"; };
+		83AEBA5245DA50729098E569 /* Pods-RouteMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-RouteMap/Pods-RouteMap.release.xcconfig"; sourceTree = "<group>"; };
+		A60515A981ECD84F7F55DE35 /* libPods-RouteMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RouteMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D22CAA21B5513E80007A3CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DF09EE71B563B2D007A8BF2 /* MapKit.framework in Frameworks */,
+				6DF09EE51B5616A9007A8BF2 /* SystemConfiguration.framework in Frameworks */,
+				6D1295241B55689400FCDA1A /* QuartzCore.framework in Frameworks */,
+				6DF09EE31B561691007A8BF2 /* OpenGLES.framework in Frameworks */,
+				6DF09EE11B561688007A8BF2 /* libz.dylib in Frameworks */,
+				6DF09EDF1B56167F007A8BF2 /* libicucore.dylib in Frameworks */,
+				6DF09EDD1B561675007A8BF2 /* libc++.dylib in Frameworks */,
+				6DF09EDB1B56166A007A8BF2 /* ImageIO.framework in Frameworks */,
+				6DF09ED91B561660007A8BF2 /* CoreText.framework in Frameworks */,
+				6DF09ED71B561657007A8BF2 /* GLKit.framework in Frameworks */,
+				6DF09ED51B56164B007A8BF2 /* AVFoundation.framework in Frameworks */,
+				6D22CAE41B554CB10007A3CD /* CoreLocation.framework in Frameworks */,
+				381054E7BB7841254E6FDA20 /* libPods-RouteMap.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D22CABE1B5513E80007A3CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D6F10E04815BEEFF40039FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74ED370C2D3F0610A1B596DF /* Pods-RouteMap.debug.xcconfig */,
+				83AEBA5245DA50729098E569 /* Pods-RouteMap.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6D22CA9C1B5513E80007A3CD = {
+			isa = PBXGroup;
+			children = (
+				6D22CAA71B5513E80007A3CD /* RouteMap */,
+				6D22CAC41B5513E80007A3CD /* RouteMapTests */,
+				6D22CAA61B5513E80007A3CD /* Products */,
+				5D6F10E04815BEEFF40039FF /* Pods */,
+				98992A96324D46D1DA94FC67 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6D22CAA61B5513E80007A3CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D22CAA51B5513E80007A3CD /* RouteMap.app */,
+				6D22CAC11B5513E80007A3CD /* RouteMapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D22CAA71B5513E80007A3CD /* RouteMap */ = {
+			isa = PBXGroup;
+			children = (
+				6D1295291B5572EC00FCDA1A /* List Filled-32.png */,
+				6D22CAE11B5534BC0007A3CD /* More-25.png */,
+				6D22CADF1B5534190007A3CD /* More Filled-25.png */,
+				6D22CAD91B5532F90007A3CD /* steering_wheel.png */,
+				6D22CADA1B5532F90007A3CD /* steering_wheel@2x.png */,
+				6D22CADB1B5532F90007A3CD /* steering_wheel@3x.png */,
+				6D22CAD51B551F160007A3CD /* Pin.png */,
+				6D22CAD61B551F160007A3CD /* Pin@2x.png */,
+				6D22CAD11B551CE70007A3CD /* Restaurant Building Filled-25.png */,
+				6D22CAD21B551CE70007A3CD /* School Crossing Patrol Filled-25.png */,
+				6D22CAAC1B5513E80007A3CD /* AppDelegate.h */,
+				6D22CAAD1B5513E80007A3CD /* AppDelegate.m */,
+				6D22CAB21B5513E80007A3CD /* ViewController.h */,
+				6D22CAB31B5513E80007A3CD /* ViewController.m */,
+				6D22CAB51B5513E80007A3CD /* Main.storyboard */,
+				6D22CAB81B5513E80007A3CD /* Images.xcassets */,
+				6D22CABA1B5513E80007A3CD /* LaunchScreen.xib */,
+				6D22CAAF1B5513E80007A3CD /* RouteMap.xcdatamodeld */,
+				6D22CAA81B5513E80007A3CD /* Supporting Files */,
+				6D1295261B556E4300FCDA1A /* MapFilterViewController.h */,
+				6D1295271B556E4300FCDA1A /* MapFilterViewController.m */,
+				6D1295341B55875500FCDA1A /* MapManager.swift */,
+				6D1295331B55875400FCDA1A /* RouteMap-Bridging-Header.h */,
+			);
+			path = RouteMap;
+			sourceTree = "<group>";
+		};
+		6D22CAA81B5513E80007A3CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D22CAA91B5513E80007A3CD /* Info.plist */,
+				6D22CAAA1B5513E80007A3CD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6D22CAC41B5513E80007A3CD /* RouteMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				6D22CAC71B5513E80007A3CD /* RouteMapTests.m */,
+				6D22CAC51B5513E80007A3CD /* Supporting Files */,
+			);
+			path = RouteMapTests;
+			sourceTree = "<group>";
+		};
+		6D22CAC51B5513E80007A3CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D22CAC61B5513E80007A3CD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		98992A96324D46D1DA94FC67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DF09EE61B563B2D007A8BF2 /* MapKit.framework */,
+				6DF09EE41B5616A9007A8BF2 /* SystemConfiguration.framework */,
+				6DF09EE21B561691007A8BF2 /* OpenGLES.framework */,
+				6DF09EE01B561688007A8BF2 /* libz.dylib */,
+				6DF09EDE1B56167F007A8BF2 /* libicucore.dylib */,
+				6DF09EDC1B561675007A8BF2 /* libc++.dylib */,
+				6DF09EDA1B56166A007A8BF2 /* ImageIO.framework */,
+				6DF09ED81B561660007A8BF2 /* CoreText.framework */,
+				6DF09ED61B561657007A8BF2 /* GLKit.framework */,
+				6DF09ED41B56164B007A8BF2 /* AVFoundation.framework */,
+				6D1295231B55689400FCDA1A /* QuartzCore.framework */,
+				6D22CAE31B554CB10007A3CD /* CoreLocation.framework */,
+				A60515A981ECD84F7F55DE35 /* libPods-RouteMap.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D22CAA41B5513E80007A3CD /* RouteMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D22CACB1B5513E80007A3CD /* Build configuration list for PBXNativeTarget "RouteMap" */;
+			buildPhases = (
+				925D3069DE3F462A0B8A1DE7 /* Check Pods Manifest.lock */,
+				6D22CAA11B5513E80007A3CD /* Sources */,
+				6D22CAA21B5513E80007A3CD /* Frameworks */,
+				6D22CAA31B5513E80007A3CD /* Resources */,
+				B87739649416272E913BB58A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RouteMap;
+			productName = RouteMap;
+			productReference = 6D22CAA51B5513E80007A3CD /* RouteMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6D22CAC01B5513E80007A3CD /* RouteMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D22CACE1B5513E80007A3CD /* Build configuration list for PBXNativeTarget "RouteMapTests" */;
+			buildPhases = (
+				6D22CABD1B5513E80007A3CD /* Sources */,
+				6D22CABE1B5513E80007A3CD /* Frameworks */,
+				6D22CABF1B5513E80007A3CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D22CAC31B5513E80007A3CD /* PBXTargetDependency */,
+			);
+			name = RouteMapTests;
+			productName = RouteMapTests;
+			productReference = 6D22CAC11B5513E80007A3CD /* RouteMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D22CA9D1B5513E80007A3CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = com.acps;
+				TargetAttributes = {
+					6D22CAA41B5513E80007A3CD = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					6D22CAC01B5513E80007A3CD = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 6D22CAA41B5513E80007A3CD;
+					};
+				};
+			};
+			buildConfigurationList = 6D22CAA01B5513E80007A3CD /* Build configuration list for PBXProject "RouteMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D22CA9C1B5513E80007A3CD;
+			productRefGroup = 6D22CAA61B5513E80007A3CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D22CAA41B5513E80007A3CD /* RouteMap */,
+				6D22CAC01B5513E80007A3CD /* RouteMapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D22CAA31B5513E80007A3CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D12952A1B5572EC00FCDA1A /* List Filled-32.png in Resources */,
+				6D22CADE1B5532F90007A3CD /* steering_wheel@3x.png in Resources */,
+				6D22CADD1B5532F90007A3CD /* steering_wheel@2x.png in Resources */,
+				6D22CAB71B5513E80007A3CD /* Main.storyboard in Resources */,
+				6D22CAD31B551CE70007A3CD /* Restaurant Building Filled-25.png in Resources */,
+				6D22CADC1B5532F90007A3CD /* steering_wheel.png in Resources */,
+				6D22CAE01B5534190007A3CD /* More Filled-25.png in Resources */,
+				6D22CABC1B5513E80007A3CD /* LaunchScreen.xib in Resources */,
+				6D22CAD71B551F160007A3CD /* Pin.png in Resources */,
+				6D22CAD81B551F160007A3CD /* Pin@2x.png in Resources */,
+				6D22CAE21B5534BC0007A3CD /* More-25.png in Resources */,
+				6D22CAB91B5513E80007A3CD /* Images.xcassets in Resources */,
+				6D22CAD41B551CE70007A3CD /* School Crossing Patrol Filled-25.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D22CABF1B5513E80007A3CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		925D3069DE3F462A0B8A1DE7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B87739649416272E913BB58A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RouteMap/Pods-RouteMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D22CAA11B5513E80007A3CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D22CAAE1B5513E80007A3CD /* AppDelegate.m in Sources */,
+				6D1295281B556E4300FCDA1A /* MapFilterViewController.m in Sources */,
+				6D22CAAB1B5513E80007A3CD /* main.m in Sources */,
+				6D22CAB41B5513E80007A3CD /* ViewController.m in Sources */,
+				6D1295351B55875500FCDA1A /* MapManager.swift in Sources */,
+				6D22CAB11B5513E80007A3CD /* RouteMap.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D22CABD1B5513E80007A3CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D22CAC81B5513E80007A3CD /* RouteMapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D22CAC31B5513E80007A3CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D22CAA41B5513E80007A3CD /* RouteMap */;
+			targetProxy = 6D22CAC21B5513E80007A3CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6D22CAB51B5513E80007A3CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D22CAB61B5513E80007A3CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6D22CABA1B5513E80007A3CD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D22CABB1B5513E80007A3CD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D22CAC91B5513E80007A3CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D22CACA1B5513E80007A3CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D22CACC1B5513E80007A3CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74ED370C2D3F0610A1B596DF /* Pods-RouteMap.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = RouteMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RouteMap/RouteMap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6D22CACD1B5513E80007A3CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83AEBA5245DA50729098E569 /* Pods-RouteMap.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = RouteMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RouteMap/RouteMap-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		6D22CACF1B5513E80007A3CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RouteMapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RouteMap.app/RouteMap";
+			};
+			name = Debug;
+		};
+		6D22CAD01B5513E80007A3CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RouteMapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RouteMap.app/RouteMap";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D22CAA01B5513E80007A3CD /* Build configuration list for PBXProject "RouteMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D22CAC91B5513E80007A3CD /* Debug */,
+				6D22CACA1B5513E80007A3CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D22CACB1B5513E80007A3CD /* Build configuration list for PBXNativeTarget "RouteMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D22CACC1B5513E80007A3CD /* Debug */,
+				6D22CACD1B5513E80007A3CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D22CACE1B5513E80007A3CD /* Build configuration list for PBXNativeTarget "RouteMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D22CACF1B5513E80007A3CD /* Debug */,
+				6D22CAD01B5513E80007A3CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6D22CAAF1B5513E80007A3CD /* RouteMap.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6D22CAB01B5513E80007A3CD /* RouteMap.xcdatamodel */,
+			);
+			currentVersion = 6D22CAB01B5513E80007A3CD /* RouteMap.xcdatamodel */;
+			path = RouteMap.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6D22CA9D1B5513E80007A3CD /* Project object */;
+}

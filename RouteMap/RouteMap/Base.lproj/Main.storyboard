@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hU5-fi-IK1">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89v-7M-V4q">
+                                <rect key="frame" x="0.0" y="65" width="375" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jV6-ji-A4W">
+                                        <rect key="frame" x="8" y="7" width="32" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="HQx-jp-Dgp"/>
+                                        </constraints>
+                                        <state key="normal" image="More-25.png"/>
+                                        <connections>
+                                            <action selector="showFilterView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mdj-cL-j1U"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="15n-tg-Oh0">
+                                        <rect key="frame" x="46" y="4" width="290" height="31"/>
+                                        <color key="minimumTrackTintColor" red="1" green="0.60634586950000002" blue="0.15559742630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="thumbTintColor" red="1" green="0.60634586950000002" blue="0.15559742630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERj-os-Q5Q">
+                                        <rect key="frame" x="342" y="7" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="YAM-To-VIS"/>
+                                        </constraints>
+                                        <state key="normal" title="Buttonasdf" image="List Filled-32.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.18622674280000001" green="0.82513282139999999" blue="1" alpha="0.79000000000000004" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="15n-tg-Oh0" firstAttribute="leading" secondItem="jV6-ji-A4W" secondAttribute="trailing" constant="8" symbolic="YES" id="6rF-en-9XJ"/>
+                                    <constraint firstItem="15n-tg-Oh0" firstAttribute="centerY" secondItem="ERj-os-Q5Q" secondAttribute="centerY" id="D6k-RV-Ei1"/>
+                                    <constraint firstItem="ERj-os-Q5Q" firstAttribute="leading" secondItem="15n-tg-Oh0" secondAttribute="trailing" constant="8" symbolic="YES" id="Fqg-H2-oId"/>
+                                    <constraint firstAttribute="bottom" secondItem="ERj-os-Q5Q" secondAttribute="bottom" constant="10" id="KA3-Dd-bRT"/>
+                                    <constraint firstAttribute="trailing" secondItem="ERj-os-Q5Q" secondAttribute="trailing" constant="8" id="P8m-87-E9o"/>
+                                    <constraint firstItem="jV6-ji-A4W" firstAttribute="top" secondItem="89v-7M-V4q" secondAttribute="top" constant="7" id="Ztl-Na-Syr"/>
+                                    <constraint firstItem="ERj-os-Q5Q" firstAttribute="top" secondItem="89v-7M-V4q" secondAttribute="top" constant="7" id="naF-Ys-Izb"/>
+                                    <constraint firstItem="jV6-ji-A4W" firstAttribute="leading" secondItem="89v-7M-V4q" secondAttribute="leadingMargin" id="tvi-ZS-LXt"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MuV-gq-cFa" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d3U-1v-t4q">
+                                        <rect key="frame" x="332" y="8" width="35" height="105"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDL-hx-ut3">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                <state key="normal" image="steering_wheel.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.60634586950000002" blue="0.15559742630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MuV-gq-cFa" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Bhf-RB-S4E"/>
+                            <constraint firstItem="MuV-gq-cFa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="108" id="HO0-RS-leP"/>
+                            <constraint firstItem="89v-7M-V4q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="Otc-P3-dpk"/>
+                            <constraint firstItem="MuV-gq-cFa" firstAttribute="trailing" secondItem="89v-7M-V4q" secondAttribute="trailing" id="QHJ-9C-Icw"/>
+                            <constraint firstItem="89v-7M-V4q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VMB-Ps-QMm"/>
+                            <constraint firstAttribute="trailing" secondItem="89v-7M-V4q" secondAttribute="trailing" id="dl8-wL-NN5"/>
+                            <constraint firstItem="MuV-gq-cFa" firstAttribute="leading" secondItem="89v-7M-V4q" secondAttribute="leading" id="gPm-5m-xld"/>
+                            <constraint firstItem="MuV-gq-cFa" firstAttribute="top" secondItem="89v-7M-V4q" secondAttribute="bottom" constant="1" id="i9g-C1-CbU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FaB-jI-ij0"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="MapView" destination="MuV-gq-cFa" id="IA4-NX-X5q"/>
+                        <outlet property="headerView" destination="89v-7M-V4q" id="Yt5-kp-tql"/>
+                        <outlet property="mapView" destination="MuV-gq-cFa" id="MWA-el-dvP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1217.5" y="831.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TIg-aR-t9P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hU5-fi-IK1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4a7-Pm-ywe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="C9c-xv-2Qs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6G-gC-Wha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="471" y="832"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="List Filled-32.png" width="32" height="32"/>
+        <image name="More-25.png" width="25" height="25"/>
+        <image name="steering_wheel.png" width="25" height="25"/>
+    </resources>
+</document>

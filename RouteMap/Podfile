@@ -1,0 +1,18 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '8.0'
+target 'RouteMap' do
+ pod 'GoogleMaps'
+ pod 'INTULocationManager'
+ pod 'SMCalloutView'
+ pod 'KLCPopup'
+ pod 'Colours'
+ pod 'ContextMenu.iOS'
+ pod 'XLForm'
+ pod 'MZFormSheetPresentationController'
+ pod 'GoogleMapsDirection'
+end
+
+target 'RouteMapTests' do
+
+end
+
