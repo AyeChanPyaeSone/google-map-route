@@ -6,8 +6,9 @@
 //  Copyright (c) 2015 com.acps. All rights reserved.
 //
 
-#ifndef RouteMap_RouteDetailController_h
-#define RouteMap_RouteDetailController_h
+#import <UIKit/UIKit.h>
 
-
-#endif
+@interface RouteDetailController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *routeDetailTableView;
+@property (weak, nonatomic) NSArray *steps;
+@end

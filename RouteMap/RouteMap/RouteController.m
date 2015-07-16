@@ -115,12 +115,8 @@ static AFHTTPRequestOperationManager* requestManager;
             for(Steps *step in stepsArray){
                 NSLog(@"%@",step.html_instructions);
                 NSLog(@"%lu",(unsigned long)[step.steps count]);
+                NSLog(@"%@",step.transit_details.line.vehicle.name);
             }
-            //NSLog(@"Route %@",route.html_instructions);
-            
-            NSLog(@"steps %@",dictsteps);
-            
-            
             if ([routesArray count] > 0)
             {
                 NSDictionary *routeDict = [routesArray objectAtIndex:0];

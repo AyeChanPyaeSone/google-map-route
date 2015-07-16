@@ -9,7 +9,6 @@
 
 #import "Steps.h"
 
-
 @implementation Steps
 
 -(Class)rm_itemClassForArrayProperty:(NSString *)property {
@@ -18,6 +17,4 @@
     }
     return nil;
 }
-
-
 @end

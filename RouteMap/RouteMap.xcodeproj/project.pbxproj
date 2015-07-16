@@ -44,7 +44,14 @@
 		A3106B9E1B5785F800FB57D3 /* Steps.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106B9D1B5785F800FB57D3 /* Steps.m */; };
 		A3106BA11B57875700FB57D3 /* DetailSteps.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106BA01B57875700FB57D3 /* DetailSteps.m */; };
 		A3106BA61B5790FA00FB57D3 /* RouteDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106BA51B5790FA00FB57D3 /* RouteDetailController.m */; };
-		A3106BA91B57938300FB57D3 /* RouteDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106BA81B57938300FB57D3 /* RouteDetailCell.m */; };
+		A3106BA91B57938300FB57D3 /* WalkRouteDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106BA81B57938300FB57D3 /* WalkRouteDetailCell.m */; };
+		A3106BAD1B57AD1900FB57D3 /* TransitDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106BAC1B57AD1900FB57D3 /* TransitDetail.m */; };
+		A3106BAF1B57AD2E00FB57D3 /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106BAE1B57AD2E00FB57D3 /* Vehicle.m */; };
+		A3106BB31B57B40500FB57D3 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106BB21B57B40500FB57D3 /* Line.m */; };
+		A3106BB51B57B83500FB57D3 /* walk.png in Resources */ = {isa = PBXBuildFile; fileRef = A3106BB41B57B83500FB57D3 /* walk.png */; };
+		A3106BB71B57B92000FB57D3 /* subway.png in Resources */ = {isa = PBXBuildFile; fileRef = A3106BB61B57B92000FB57D3 /* subway.png */; };
+		A3106BB91B57BCBD00FB57D3 /* MRTRouteDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106BB81B57BCBD00FB57D3 /* MRTRouteDetailCell.m */; };
+		A3106BBD1B57BD3700FB57D3 /* BusRouteDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106BBC1B57BD3700FB57D3 /* BusRouteDetailCell.m */; };
 		A3E5CEA81B5663C300AE3840 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E5CEA71B5663C300AE3840 /* MapManager.swift */; };
 		A3E5CEB11B56C02B00AE3840 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E5CEAF1B56C02B00AE3840 /* TestViewController.m */; };
 		A3E5CEB21B56C02B00AE3840 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E5CEB01B56C02B00AE3840 /* TestViewController.xib */; };
@@ -114,8 +121,20 @@
 		A3106BA21B57876200FB57D3 /* DetailSteps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailSteps.h; sourceTree = "<group>"; };
 		A3106BA41B5790DF00FB57D3 /* RouteDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RouteDetailController.h; path = ../RouteDetailController.h; sourceTree = "<group>"; };
 		A3106BA51B5790FA00FB57D3 /* RouteDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteDetailController.m; sourceTree = "<group>"; };
-		A3106BA81B57938300FB57D3 /* RouteDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteDetailCell.m; sourceTree = "<group>"; };
-		A3106BAA1B57939100FB57D3 /* RouteDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouteDetailCell.h; sourceTree = "<group>"; };
+		A3106BA81B57938300FB57D3 /* WalkRouteDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkRouteDetailCell.m; sourceTree = "<group>"; };
+		A3106BAA1B57939100FB57D3 /* WalkRouteDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WalkRouteDetailCell.h; sourceTree = "<group>"; };
+		A3106BAB1B57ACD700FB57D3 /* TransitDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitDetail.h; sourceTree = "<group>"; };
+		A3106BAC1B57AD1900FB57D3 /* TransitDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitDetail.m; sourceTree = "<group>"; };
+		A3106BAE1B57AD2E00FB57D3 /* Vehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
+		A3106BB01B57AD4800FB57D3 /* Vehicle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
+		A3106BB11B57B3F900FB57D3 /* Line.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		A3106BB21B57B40500FB57D3 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
+		A3106BB41B57B83500FB57D3 /* walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk.png; sourceTree = "<group>"; };
+		A3106BB61B57B92000FB57D3 /* subway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subway.png; sourceTree = "<group>"; };
+		A3106BB81B57BCBD00FB57D3 /* MRTRouteDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRTRouteDetailCell.m; sourceTree = "<group>"; };
+		A3106BBA1B57BCCB00FB57D3 /* MRTRouteDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRTRouteDetailCell.h; sourceTree = "<group>"; };
+		A3106BBB1B57BD2800FB57D3 /* BusRouteDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusRouteDetailCell.h; sourceTree = "<group>"; };
+		A3106BBC1B57BD3700FB57D3 /* BusRouteDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusRouteDetailCell.m; sourceTree = "<group>"; };
 		A3E5CEA61B5663C200AE3840 /* RouteMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RouteMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		A3E5CEA71B5663C300AE3840 /* MapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		A3E5CEAE1B56C02B00AE3840 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
@@ -287,6 +306,12 @@
 				A3106B9F1B57860900FB57D3 /* Steps.h */,
 				A3106BA01B57875700FB57D3 /* DetailSteps.m */,
 				A3106BA21B57876200FB57D3 /* DetailSteps.h */,
+				A3106BAB1B57ACD700FB57D3 /* TransitDetail.h */,
+				A3106BAC1B57AD1900FB57D3 /* TransitDetail.m */,
+				A3106BAE1B57AD2E00FB57D3 /* Vehicle.m */,
+				A3106BB01B57AD4800FB57D3 /* Vehicle.h */,
+				A3106BB11B57B3F900FB57D3 /* Line.h */,
+				A3106BB21B57B40500FB57D3 /* Line.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -294,8 +319,14 @@
 		A3106BA71B57937400FB57D3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				A3106BA81B57938300FB57D3 /* RouteDetailCell.m */,
-				A3106BAA1B57939100FB57D3 /* RouteDetailCell.h */,
+				A3106BB41B57B83500FB57D3 /* walk.png */,
+				A3106BB61B57B92000FB57D3 /* subway.png */,
+				A3106BA81B57938300FB57D3 /* WalkRouteDetailCell.m */,
+				A3106BAA1B57939100FB57D3 /* WalkRouteDetailCell.h */,
+				A3106BB81B57BCBD00FB57D3 /* MRTRouteDetailCell.m */,
+				A3106BBA1B57BCCB00FB57D3 /* MRTRouteDetailCell.h */,
+				A3106BBB1B57BD2800FB57D3 /* BusRouteDetailCell.h */,
+				A3106BBC1B57BD3700FB57D3 /* BusRouteDetailCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -401,10 +432,12 @@
 				6D22CABC1B5513E80007A3CD /* LaunchScreen.xib in Resources */,
 				6D22CAD71B551F160007A3CD /* Pin.png in Resources */,
 				6D22CAD81B551F160007A3CD /* Pin@2x.png in Resources */,
+				A3106BB51B57B83500FB57D3 /* walk.png in Resources */,
 				A3E5CEB81B56C13E00AE3840 /* PageMenuViewContoller.xib in Resources */,
 				6D22CAE21B5534BC0007A3CD /* More-25.png in Resources */,
 				6D22CAB91B5513E80007A3CD /* Images.xcassets in Resources */,
 				A3E5CEB21B56C02B00AE3840 /* TestViewController.xib in Resources */,
+				A3106BB71B57B92000FB57D3 /* subway.png in Resources */,
 				6D22CAD41B551CE70007A3CD /* School Crossing Patrol Filled-25.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,19 +490,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3106BA11B57875700FB57D3 /* DetailSteps.m in Sources */,
+				A3106BB31B57B40500FB57D3 /* Line.m in Sources */,
 				6D22CAAE1B5513E80007A3CD /* AppDelegate.m in Sources */,
+				A3106BBD1B57BD3700FB57D3 /* BusRouteDetailCell.m in Sources */,
+				A3106BAD1B57AD1900FB57D3 /* TransitDetail.m in Sources */,
 				6D1295281B556E4300FCDA1A /* MapFilterViewController.m in Sources */,
+				A3106BB91B57BCBD00FB57D3 /* MRTRouteDetailCell.m in Sources */,
 				A3E5CEBA1B56C15C00AE3840 /* PageMenuViewContoller.m in Sources */,
 				A3106BA61B5790FA00FB57D3 /* RouteDetailController.m in Sources */,
 				A3E5CEB51B56C0FE00AE3840 /* CAPSPageMenu.m in Sources */,
 				A3106B9A1B577F8B00FB57D3 /* Route.m in Sources */,
-				A3106BA91B57938300FB57D3 /* RouteDetailCell.m in Sources */,
+				A3106BA91B57938300FB57D3 /* WalkRouteDetailCell.m in Sources */,
 				A3E5CEB11B56C02B00AE3840 /* TestViewController.m in Sources */,
 				6D22CAAB1B5513E80007A3CD /* main.m in Sources */,
 				6D22CAB41B5513E80007A3CD /* ViewController.m in Sources */,
 				A3106B971B575D3600FB57D3 /* RouteController.m in Sources */,
 				A3106B9E1B5785F800FB57D3 /* Steps.m in Sources */,
 				A3E5CEA81B5663C300AE3840 /* MapManager.swift in Sources */,
+				A3106BAF1B57AD2E00FB57D3 /* Vehicle.m in Sources */,
 				6D22CAB11B5513E80007A3CD /* RouteMap.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

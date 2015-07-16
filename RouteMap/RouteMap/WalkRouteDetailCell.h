@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface RouteDetailCell : UITableViewCell
-
+@interface WalkRouteDetailCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *html_instructions_label;
+@property (weak, nonatomic) IBOutlet UILabel *distance_time_label;
 @end

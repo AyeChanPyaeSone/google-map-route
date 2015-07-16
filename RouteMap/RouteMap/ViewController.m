@@ -20,6 +20,7 @@
 //#import "GMDirectionService.h"
 #import "PageMenuViewContoller.h"
 #import "RouteController.h"
+#import "RouteDetailController.h"
 @import CoreLocation;
 @import GoogleMaps;
 
@@ -47,6 +48,7 @@ static const CGFloat DefaultZoom = 11.0f;
 @end
 @implementation ViewController
 NSMutableArray *coordinates;
+NSArray *stepsarr;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -79,14 +81,15 @@ NSMutableArray *coordinates;
     GMSMutablePath *path = [GMSMutablePath path];
     
     coordinates = [[NSMutableArray alloc]init];
-     [coordinates addObject:[[CLLocation alloc] initWithLatitude:1.300409 longitude:103.838505]];//Somerset
-    [coordinates addObject:[[CLLocation alloc] initWithLatitude:1.303385 longitude:103.850609]];//bugis
+    
+    [coordinates addObject:[[CLLocation alloc] initWithLatitude:1.333430 longitude:103.965634]];//Somerset
+    [coordinates addObject:[[CLLocation alloc] initWithLatitude:1.303341 longitude:103.850481]];//bugis
     
     if ([coordinates count] > 1)
     {
         [RouteController getPolylineWithLocations:coordinates travelMode:TravelModeTransit success:^(id object,NSArray *arr){
             
-            
+            stepsarr = arr;
             NSLog(@"object %@",object);
             
             GMSStrokeStyle *solidRed = [GMSStrokeStyle solidColor:[UIColor redColor]];
@@ -372,32 +375,37 @@ NSMutableArray *coordinates;
 }
 - (IBAction)showFilterView:(id)sender {
     
-    MapFilterViewController *mapFilterVC = [[MapFilterViewController alloc] init];
-    MZFormSheetPresentationController *formSheetController = [[MZFormSheetPresentationController alloc] initWithContentViewController:mapFilterVC];
-    
-//    formSheetController.shouldApplyBackgroundBlurEffect = YES;
-  //  formSheetController.blurEffectStyle = UIBlurEffectStyleExtraLight;
-    formSheetController.shouldDismissOnBackgroundViewTap = YES;
-    formSheetController.contentViewControllerTransitionStyle = MZFormSheetPresentationTransitionStyleSlideFromTop;
-     formSheetController.contentViewSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height - 150);
-    formSheetController.contentViewController.view.frame = CGRectMake(0, 105, formSheetController.contentViewSize.width, formSheetController.contentViewSize.height);
-         __weak MZFormSheetPresentationController *weakController = formSheetController;
-    formSheetController.willPresentContentViewControllerHandler = ^(UIViewController *a) {
-        weakController.contentViewController.view.layer.masksToBounds = NO;
-        
-        CALayer *layer = weakController.contentViewController.view.layer;
-        
-        [layer setShadowOffset:CGSizeMake(0, 3)];
-        [layer setShadowOpacity:0.8];
-        [layer setShadowRadius:3.0f];
-        
-        [layer setShadowPath:
-         [[UIBezierPath bezierPathWithRoundedRect:[weakController.contentViewController.view bounds]
-                                     cornerRadius:12.0f] CGPath]];
-    };
-    
-    [self presentViewController:formSheetController animated:YES completion:nil];
+//    MapFilterViewController *mapFilterVC = [[MapFilterViewController alloc] init];
+//    MZFormSheetPresentationController *formSheetController = [[MZFormSheetPresentationController alloc] initWithContentViewController:mapFilterVC];
+//    
+////    formSheetController.shouldApplyBackgroundBlurEffect = YES;
+//  //  formSheetController.blurEffectStyle = UIBlurEffectStyleExtraLight;
+//    formSheetController.shouldDismissOnBackgroundViewTap = YES;
+//    formSheetController.contentViewControllerTransitionStyle = MZFormSheetPresentationTransitionStyleSlideFromTop;
+//     formSheetController.contentViewSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height - 150);
+//    formSheetController.contentViewController.view.frame = CGRectMake(0, 105, formSheetController.contentViewSize.width, formSheetController.contentViewSize.height);
+//         __weak MZFormSheetPresentationController *weakController = formSheetController;
+//    formSheetController.willPresentContentViewControllerHandler = ^(UIViewController *a) {
+//        weakController.contentViewController.view.layer.masksToBounds = NO;
+//        
+//        CALayer *layer = weakController.contentViewController.view.layer;
+//        
+//        [layer setShadowOffset:CGSizeMake(0, 3)];
+//        [layer setShadowOpacity:0.8];
+//        [layer setShadowRadius:3.0f];
+//        
+//        [layer setShadowPath:
+//         [[UIBezierPath bezierPathWithRoundedRect:[weakController.contentViewController.view bounds]
+//                                     cornerRadius:12.0f] CGPath]];
+//    };
+//    
 //    [self presentViewController:formSheetController animated:YES completion:nil];
+    
+    UIStoryboard *mainSb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    RouteDetailController *pinVC = [mainSb instantiateViewControllerWithIdentifier:@"RouteDetailController"];
+    pinVC.steps =  stepsarr;
+    UINavigationController *navVC = [[UINavigationController alloc]initWithRootViewController:pinVC];
+    [self presentViewController:navVC animated:YES completion:nil];
 }
 
 -(void)showDetailPopup{
