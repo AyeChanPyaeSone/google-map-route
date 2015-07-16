@@ -10,7 +10,9 @@
 
 
 #import "RouteController.h"
-
+#import "RMMapper.h"
+#import "Route.h"
+#import "Steps.h"
 
 @interface RouteController()
 @end
@@ -102,6 +104,22 @@ static AFHTTPRequestOperationManager* requestManager;
             GMSPolyline *polyline;
             NSLog(@"responseobject %@",responseObject);
             NSArray *routesArray = [responseObject objectForKey:@"routes"];
+            NSDictionary *steps =  [routesArray objectAtIndex:0];
+            NSArray *arraysteps = [steps objectForKey:@"legs"];
+            NSDictionary *dictsteps = [arraysteps objectAtIndex:0];
+
+           // Steps* step = [RMMapper objectWithClass:[Steps class] fromDictionary:dictsteps[@"steps"]];
+            
+           NSArray* stepsArray= [RMMapper arrayOfClass:[Steps class] fromArrayOfDictionary:dictsteps[@"steps"]];
+            
+            for(Steps *step in stepsArray){
+                NSLog(@"%@",step.html_instructions);
+                NSLog(@"%lu",(unsigned long)[step.steps count]);
+            }
+            //NSLog(@"Route %@",route.html_instructions);
+            
+            NSLog(@"steps %@",dictsteps);
+            
             
             if ([routesArray count] > 0)
             {
@@ -122,7 +140,7 @@ static AFHTTPRequestOperationManager* requestManager;
             }
             
             if (success) {
-                success(polyline);
+                success(polyline,stepsArray);
             }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

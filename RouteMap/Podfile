@@ -10,7 +10,7 @@ target 'RouteMap' do
  pod 'ContextMenu.iOS'
  pod 'XLForm'
  pod 'MZFormSheetPresentationController'
- 
+ pod 'RMMapper'	 
 end
 
 target 'RouteMapTests' do

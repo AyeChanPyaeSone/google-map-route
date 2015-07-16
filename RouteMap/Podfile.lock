@@ -30,6 +30,7 @@ PODS:
   - MZFormSheetPresentationController (1.1.2):
     - JGMethodSwizzler
     - MZAppearance
+  - RMMapper (1.1.5)
   - SMCalloutView (2.1.2)
   - XLForm (3.0.0)
 
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - INTULocationManager
   - KLCPopup
   - MZFormSheetPresentationController
+  - RMMapper
   - SMCalloutView
   - XLForm
 
@@ -54,6 +56,7 @@ SPEC CHECKSUMS:
   KLCPopup: 76c5a19227977f1e53d85236f9ef42257c168d98
   MZAppearance: 6e9dc64e42074c0a19812a327f590746c3283bab
   MZFormSheetPresentationController: 2e848d89c0741aef554d0ae6b138be5dc25a479f
+  RMMapper: 21122d753c736d975f6c61e674afce8db73579af
   SMCalloutView: 4078d89b847731e514b1a919fed33b383a24a106
   XLForm: 10fc7eb9e2d5df21a515fa3a794f4e26319abd0e
 

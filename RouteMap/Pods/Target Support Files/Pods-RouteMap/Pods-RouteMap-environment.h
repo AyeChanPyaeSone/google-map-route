@@ -96,6 +96,12 @@
 #define COCOAPODS_VERSION_MINOR_MZFormSheetPresentationController 1
 #define COCOAPODS_VERSION_PATCH_MZFormSheetPresentationController 2
 
+// RMMapper
+#define COCOAPODS_POD_AVAILABLE_RMMapper
+#define COCOAPODS_VERSION_MAJOR_RMMapper 1
+#define COCOAPODS_VERSION_MINOR_RMMapper 1
+#define COCOAPODS_VERSION_PATCH_RMMapper 5
+
 // SMCalloutView
 #define COCOAPODS_POD_AVAILABLE_SMCalloutView
 #define COCOAPODS_VERSION_MAJOR_SMCalloutView 2

@@ -75,22 +75,36 @@ NSMutableArray *coordinates;
     [_locationManager requestWhenInUseAuthorization];
     [_locationManager requestAlwaysAuthorization];
     
+
     GMSMutablePath *path = [GMSMutablePath path];
+    
     coordinates = [[NSMutableArray alloc]init];
-     [coordinates addObject:[[CLLocation alloc] initWithLatitude:1.300945 longitude:103.838522]];
-    [coordinates addObject:[[CLLocation alloc] initWithLatitude:1.300467 longitude:103.838522]];
+     [coordinates addObject:[[CLLocation alloc] initWithLatitude:1.300409 longitude:103.838505]];//Somerset
+    [coordinates addObject:[[CLLocation alloc] initWithLatitude:1.303385 longitude:103.850609]];//bugis
     
     if ([coordinates count] > 1)
     {
-        [RouteController getPolylineWithLocations:coordinates travelMode:TravelModeWalking success:^(id object){
+        [RouteController getPolylineWithLocations:coordinates travelMode:TravelModeTransit success:^(id object,NSArray *arr){
+            
             
             NSLog(@"object %@",object);
             
+            GMSStrokeStyle *solidRed = [GMSStrokeStyle solidColor:[UIColor redColor]];
+            GMSStrokeStyle *redYellow =
+            [GMSStrokeStyle gradientFromColor:[UIColor redColor] toColor:[UIColor yellowColor]];
+            
+            
             GMSPolyline *polyline = object;
+            polyline.spans = @[[GMSStyleSpan spanWithStyle:solidRed],
+                               [GMSStyleSpan spanWithStyle:solidRed],
+                               [GMSStyleSpan spanWithStyle:redYellow]];
+
             polyline.strokeWidth = 3;
             polyline.strokeColor = [UIColor blueColor];
+            polyline.geodesic = YES;
+            polyline.spans = @[[GMSStyleSpan spanWithStyle:solidRed segments:2],
+                               [GMSStyleSpan spanWithStyle:redYellow segments:10]];
             polyline.map = _mapView;
-
           
         } fail:^(NSError *error) {
              NSLog(@"%@", error);

@@ -20,7 +20,7 @@ typedef enum tagTravelMode
     TravelModeWalking
 }TravelMode;
 
-typedef void (^SuccessBlock)(GMSPolyline *polyline);
+typedef void (^SuccessBlock)(GMSPolyline *polyline , NSArray *arr);
 typedef void (^FailBlock)(NSError *error);
 typedef void (^ProgressBlock)(NSUInteger bytesRead, NSInteger totalBytesRead, NSInteger totalBytesExpectedToRead);
 

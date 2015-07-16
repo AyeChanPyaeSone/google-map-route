@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "352BE08ED286029397FC156E"
+               BlueprintIdentifier = "7707E7E388B9A278688B564E"
                BuildableName = "libPods-RouteMap-JGMethodSwizzler.a"
                BlueprintName = "Pods-RouteMap-JGMethodSwizzler"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -40,6 +40,11 @@
 		6DF09EE51B5616A9007A8BF2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF09EE41B5616A9007A8BF2 /* SystemConfiguration.framework */; };
 		6DF09EE71B563B2D007A8BF2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF09EE61B563B2D007A8BF2 /* MapKit.framework */; };
 		A3106B971B575D3600FB57D3 /* RouteController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106B961B575D3600FB57D3 /* RouteController.m */; };
+		A3106B9A1B577F8B00FB57D3 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106B991B577F8B00FB57D3 /* Route.m */; };
+		A3106B9E1B5785F800FB57D3 /* Steps.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106B9D1B5785F800FB57D3 /* Steps.m */; };
+		A3106BA11B57875700FB57D3 /* DetailSteps.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106BA01B57875700FB57D3 /* DetailSteps.m */; };
+		A3106BA61B5790FA00FB57D3 /* RouteDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106BA51B5790FA00FB57D3 /* RouteDetailController.m */; };
+		A3106BA91B57938300FB57D3 /* RouteDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106BA81B57938300FB57D3 /* RouteDetailCell.m */; };
 		A3E5CEA81B5663C300AE3840 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E5CEA71B5663C300AE3840 /* MapManager.swift */; };
 		A3E5CEB11B56C02B00AE3840 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E5CEAF1B56C02B00AE3840 /* TestViewController.m */; };
 		A3E5CEB21B56C02B00AE3840 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E5CEB01B56C02B00AE3840 /* TestViewController.xib */; };
@@ -101,6 +106,16 @@
 		83AEBA5245DA50729098E569 /* Pods-RouteMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-RouteMap/Pods-RouteMap.release.xcconfig"; sourceTree = "<group>"; };
 		A3106B951B575D2800FB57D3 /* RouteController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouteController.h; sourceTree = "<group>"; };
 		A3106B961B575D3600FB57D3 /* RouteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteController.m; sourceTree = "<group>"; };
+		A3106B991B577F8B00FB57D3 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
+		A3106B9C1B577FC000FB57D3 /* Route.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
+		A3106B9D1B5785F800FB57D3 /* Steps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Steps.m; sourceTree = "<group>"; };
+		A3106B9F1B57860900FB57D3 /* Steps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Steps.h; sourceTree = "<group>"; };
+		A3106BA01B57875700FB57D3 /* DetailSteps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailSteps.m; sourceTree = "<group>"; };
+		A3106BA21B57876200FB57D3 /* DetailSteps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailSteps.h; sourceTree = "<group>"; };
+		A3106BA41B5790DF00FB57D3 /* RouteDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RouteDetailController.h; path = ../RouteDetailController.h; sourceTree = "<group>"; };
+		A3106BA51B5790FA00FB57D3 /* RouteDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteDetailController.m; sourceTree = "<group>"; };
+		A3106BA81B57938300FB57D3 /* RouteDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteDetailCell.m; sourceTree = "<group>"; };
+		A3106BAA1B57939100FB57D3 /* RouteDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouteDetailCell.h; sourceTree = "<group>"; };
 		A3E5CEA61B5663C200AE3840 /* RouteMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RouteMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		A3E5CEA71B5663C300AE3840 /* MapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		A3E5CEAE1B56C02B00AE3840 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
@@ -179,6 +194,8 @@
 		6D22CAA71B5513E80007A3CD /* RouteMap */ = {
 			isa = PBXGroup;
 			children = (
+				A3106BA71B57937400FB57D3 /* Cell */,
+				A3106B9B1B577F9300FB57D3 /* Model */,
 				A3E5CEB61B56C10600AE3840 /* CAPSPageMenu */,
 				6D1295291B5572EC00FCDA1A /* List Filled-32.png */,
 				6D22CAE11B5534BC0007A3CD /* More-25.png */,
@@ -209,6 +226,8 @@
 				A3E5CEBB1B56C16E00AE3840 /* PageMenuViewContoller.h */,
 				A3106B951B575D2800FB57D3 /* RouteController.h */,
 				A3106B961B575D3600FB57D3 /* RouteController.m */,
+				A3106BA41B5790DF00FB57D3 /* RouteDetailController.h */,
+				A3106BA51B5790FA00FB57D3 /* RouteDetailController.m */,
 			);
 			path = RouteMap;
 			sourceTree = "<group>";
@@ -257,6 +276,28 @@
 				A60515A981ECD84F7F55DE35 /* libPods-RouteMap.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3106B9B1B577F9300FB57D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A3106B991B577F8B00FB57D3 /* Route.m */,
+				A3106B9C1B577FC000FB57D3 /* Route.h */,
+				A3106B9D1B5785F800FB57D3 /* Steps.m */,
+				A3106B9F1B57860900FB57D3 /* Steps.h */,
+				A3106BA01B57875700FB57D3 /* DetailSteps.m */,
+				A3106BA21B57876200FB57D3 /* DetailSteps.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A3106BA71B57937400FB57D3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A3106BA81B57938300FB57D3 /* RouteDetailCell.m */,
+				A3106BAA1B57939100FB57D3 /* RouteDetailCell.h */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		A3E5CEB61B56C10600AE3840 /* CAPSPageMenu */ = {
@@ -415,14 +456,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3106BA11B57875700FB57D3 /* DetailSteps.m in Sources */,
 				6D22CAAE1B5513E80007A3CD /* AppDelegate.m in Sources */,
 				6D1295281B556E4300FCDA1A /* MapFilterViewController.m in Sources */,
 				A3E5CEBA1B56C15C00AE3840 /* PageMenuViewContoller.m in Sources */,
+				A3106BA61B5790FA00FB57D3 /* RouteDetailController.m in Sources */,
 				A3E5CEB51B56C0FE00AE3840 /* CAPSPageMenu.m in Sources */,
+				A3106B9A1B577F8B00FB57D3 /* Route.m in Sources */,
+				A3106BA91B57938300FB57D3 /* RouteDetailCell.m in Sources */,
 				A3E5CEB11B56C02B00AE3840 /* TestViewController.m in Sources */,
 				6D22CAAB1B5513E80007A3CD /* main.m in Sources */,
 				6D22CAB41B5513E80007A3CD /* ViewController.m in Sources */,
 				A3106B971B575D3600FB57D3 /* RouteController.m in Sources */,
+				A3106B9E1B5785F800FB57D3 /* Steps.m in Sources */,
 				A3E5CEA81B5663C300AE3840 /* MapManager.swift in Sources */,
 				6D22CAB11B5513E80007A3CD /* RouteMap.xcdatamodeld in Sources */,
 			);
