@@ -6,4 +6,8 @@
 //  Copyright (c) 2015 com.acps. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BusRouteDetailCell.h"
+
+@implementation BusRouteDetailCell
+
+@end

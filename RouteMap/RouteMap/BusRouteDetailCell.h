@@ -6,8 +6,14 @@
 //  Copyright (c) 2015 com.acps. All rights reserved.
 //
 
-#ifndef RouteMap_BusRouteDetailCell_h
-#define RouteMap_BusRouteDetailCell_h
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
+@interface BusRouteDetailCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *html_instructions;
+@property (weak, nonatomic) IBOutlet UILabel *startbustop_name;
+@property (weak, nonatomic) IBOutlet UILabel *endbustop_name;
+@property (weak, nonatomic) IBOutlet UILabel *stops_time;
 
-#endif
+@end
+
