@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C57087D42C5975A82235732A"
+               BlueprintIdentifier = "4B05BDF1610F4FAD514DB724"
                BuildableName = "libPods-RouteMap-SMCalloutView.a"
                BlueprintName = "Pods-RouteMap-SMCalloutView"
                ReferencedContainer = "container:Pods.xcodeproj">

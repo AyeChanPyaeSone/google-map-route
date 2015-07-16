@@ -17,10 +17,12 @@
 #import "MZFormSheetPresentationController.h"
 #import "MZFormSheetPresentationControllerSegue.h"
 #import "RouteMap-Swift.h"
-#import "GMDirectionService.h"
+//#import "GMDirectionService.h"
 #import "PageMenuViewContoller.h"
+#import "RouteController.h"
 @import CoreLocation;
 @import GoogleMaps;
+
 
 static NSString * const TitleKey = @"title";
 static NSString * const InfoKey = @"info";
@@ -40,8 +42,11 @@ static const CGFloat DefaultZoom = 11.0f;
     @property (strong, nonatomic) SMCalloutView *calloutView;
 @property (strong, nonatomic) IBOutlet UIView *headerView;
     @property (strong, nonatomic) UIView *emptyCalloutView;
+
+
 @end
 @implementation ViewController
+NSMutableArray *coordinates;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -71,24 +76,54 @@ static const CGFloat DefaultZoom = 11.0f;
     [_locationManager requestAlwaysAuthorization];
     
     GMSMutablePath *path = [GMSMutablePath path];
-    [path addLatitude:-33.866 longitude:151.195]; // Sydney
-    [path addLatitude:-18.142 longitude:178.431]; // Fiji
-    [path addLatitude:21.291 longitude:-157.821]; // Hawaii
-    [path addLatitude:37.423 longitude:-122.091]; // Mountain View
+    coordinates = [[NSMutableArray alloc]init];
+     [coordinates addObject:[[CLLocation alloc] initWithLatitude:1.300945 longitude:103.838522]];
+    [coordinates addObject:[[CLLocation alloc] initWithLatitude:1.300467 longitude:103.838522]];
     
-    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
-    polyline.strokeColor = [UIColor blueColor];
-    polyline.strokeWidth = 5.f;
-    polyline.map = _mapView;
+    if ([coordinates count] > 1)
+    {
+        [RouteController getPolylineWithLocations:coordinates travelMode:TravelModeWalking success:^(id object){
+            
+            NSLog(@"object %@",object);
+            
+            GMSPolyline *polyline = object;
+            polyline.strokeWidth = 3;
+            polyline.strokeColor = [UIColor blueColor];
+            polyline.map = _mapView;
 
-    [[GMDirectionService sharedInstance] getDirectionsFrom:@"130023" to:@"310023" succeeded:^(GMDirection *directionResponse) {
-        NSLog(@"Duration : %@", [directionResponse durationHumanized]);
-        NSLog(@"Distance : %@", [directionResponse distanceHumanized]);
-        NSArray *routes = [[directionResponse directionResponse] objectForKey:@"routes"];
-        NSLog(@"route %@",routes);
-    } failed:^(NSError *error) {
-        NSLog(@"Can't reach the server");
-    }];
+          
+        } fail:^(NSError *error) {
+             NSLog(@"%@", error);
+        }];
+
+    }
+    
+    
+    
+    
+//    [path addLatitude:1.300945 longitude:103.856239];//Bugis MRT
+//    [path addLatitude:1.300467 longitude:103.838522];//Somerset MRT
+//    [path addLatitude:1.311630 longitude:103.778658];//Dover MRT
+//    [path addLatitude:1.315618 longitude:103.765190];//Clementi MRT
+//    //[path addLatitude:-33.866 longitude:151.195]; // Sydney
+//    //[path addLatitude:-18.142 longitude:178.431]; // Fiji
+//    //[path addLatitude:21.291 longitude:-157.821]; // Hawaii
+//    //[path addLatitude:37.423 longitude:-122.091]; // Mountain View
+//    
+//    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+//    polyline.strokeColor = [UIColor blackColor];
+//    polyline.strokeWidth = 5.f;
+//    polyline.geodesic = YES;
+//    polyline.map = _mapView;
+
+//    [[GMDirectionService sharedInstance] getDirectionsFrom:@"130023" to:@"310023" succeeded:^(GMDirection *directionResponse) {
+//        NSLog(@"Duration : %@", [directionResponse durationHumanized]);
+//        NSLog(@"Distance : %@", [directionResponse distanceHumanized]);
+//        NSArray *routes = [[directionResponse directionResponse] objectForKey:@"routes"];
+//        NSLog(@"route %@",routes);
+//    } failed:^(NSError *error) {
+//        NSLog(@"Can't reach the server");
+//    }];
 
     
     

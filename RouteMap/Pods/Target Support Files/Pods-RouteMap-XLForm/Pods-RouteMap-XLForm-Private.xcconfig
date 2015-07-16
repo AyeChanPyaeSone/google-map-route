@@ -1,6 +1,6 @@
 #include "Pods-RouteMap-XLForm.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/XLForm" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/Colours" "${PODS_ROOT}/Headers/Public/ContextMenu.iOS" "${PODS_ROOT}/Headers/Public/GoogleMaps" "${PODS_ROOT}/Headers/Public/GoogleMapsDirection" "${PODS_ROOT}/Headers/Public/INTULocationManager" "${PODS_ROOT}/Headers/Public/JGMethodSwizzler" "${PODS_ROOT}/Headers/Public/KLCPopup" "${PODS_ROOT}/Headers/Public/MZAppearance" "${PODS_ROOT}/Headers/Public/MZFormSheetPresentationController" "${PODS_ROOT}/Headers/Public/SMCalloutView" "${PODS_ROOT}/Headers/Public/XLForm"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/XLForm" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/Colours" "${PODS_ROOT}/Headers/Public/ContextMenu.iOS" "${PODS_ROOT}/Headers/Public/GoogleMaps" "${PODS_ROOT}/Headers/Public/INTULocationManager" "${PODS_ROOT}/Headers/Public/JGMethodSwizzler" "${PODS_ROOT}/Headers/Public/KLCPopup" "${PODS_ROOT}/Headers/Public/MZAppearance" "${PODS_ROOT}/Headers/Public/MZFormSheetPresentationController" "${PODS_ROOT}/Headers/Public/SMCalloutView" "${PODS_ROOT}/Headers/Public/XLForm"
 OTHER_LDFLAGS = ${PODS_ROUTEMAP_XLFORM_OTHER_LDFLAGS} -ObjC
 PODS_ROOT = ${SRCROOT}
 SKIP_INSTALL = YES
