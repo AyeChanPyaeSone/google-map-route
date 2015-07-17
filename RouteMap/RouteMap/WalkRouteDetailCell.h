@@ -12,4 +12,5 @@
 @interface WalkRouteDetailCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *html_instructions_label;
 @property (weak, nonatomic) IBOutlet UILabel *distance_time_label;
+@property (weak, nonatomic) IBOutlet UILabel *your_locations;
 @end

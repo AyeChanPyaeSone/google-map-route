@@ -51,9 +51,12 @@ NSMutableArray *steps;
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     Steps *step = steps[indexPath.row];
     
-    if([step.travel_mode  isEqual: @"WALKING"]){
+    if(indexPath.row==0){
+         return 95;
+    }
+    else if([step.travel_mode  isEqual: @"WALKING"]){
         
-        return 80;
+        return 65;
     }
     else{
          return 120;
@@ -63,15 +66,28 @@ NSMutableArray *steps;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     Steps *step = steps[indexPath.row];
     NSString *num_stops;
     WalkRouteDetailCell *walkrouteDetailCell;
     if([step.travel_mode  isEqual: @"WALKING"]){
+        
+        
         static NSString *cellIdentifier = @"WalkRouteDetailCell";
         WalkRouteDetailCell *walkrouteDetailCell = (WalkRouteDetailCell *)[self.routeDetailTableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
         
-        walkrouteDetailCell.html_instructions_label.text = step.html_instructions;
-        walkrouteDetailCell.distance_time_label.text = [NSString stringWithFormat:@"%@ ( %@ ) ",[step.distance objectForKey:@"text"],[step.duration objectForKey:@"text"]];
+        if(indexPath.row>0){
+            walkrouteDetailCell.your_locations.text = step.html_instructions;
+            walkrouteDetailCell.html_instructions_label.text = [NSString stringWithFormat:@"%@ ( %@ ) ",[step.distance objectForKey:@"text"],[step.duration objectForKey:@"text"]];
+             walkrouteDetailCell.distance_time_label.text=@"";
+            
+        }
+        else{
+            
+            walkrouteDetailCell.html_instructions_label.text = step.html_instructions;
+            walkrouteDetailCell.distance_time_label.text = [NSString stringWithFormat:@"%@ ( %@ ) ",[step.distance objectForKey:@"text"],[step.duration objectForKey:@"text"]];
+        }
+       
         
         return walkrouteDetailCell;
 
@@ -84,6 +100,22 @@ NSMutableArray *steps;
             static NSString *cellIdentifier = @"MRTRouteDetailCell";
             MRTRouteDetailCell *mrtrouteDetailCell = (MRTRouteDetailCell *)[self.routeDetailTableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
             
+            if([step.transit_details.line.name isEqual:@"East West Line"]){
+                mrtrouteDetailCell.mrtline_image.image= [UIImage imageNamed:@"EW"];
+            }
+            else if([step.transit_details.line.name isEqual:@"North South Line"]){
+                mrtrouteDetailCell.mrtline_image.image= [UIImage imageNamed:@"NS"];
+            }
+            else if([step.transit_details.line.name isEqual:@"North East Line"]){
+                mrtrouteDetailCell.mrtline_image.image= [UIImage imageNamed:@"NE"];
+            }
+            else if([step.transit_details.line.name isEqual:@"Circle Line"]){
+                mrtrouteDetailCell.mrtline_image.image= [UIImage imageNamed:@"CC"];
+            }
+            else if([step.transit_details.line.name isEqual:@"Downtown Line"]){
+                mrtrouteDetailCell.mrtline_image.image= [UIImage imageNamed:@"DT"];
+                
+            }
             mrtrouteDetailCell.html_instructions.text = step.html_instructions;
             mrtrouteDetailCell.startstation_name.text = [step.transit_details.departure_stop objectForKey:@"name"];
             mrtrouteDetailCell.endstation_name.text = [step.transit_details.arrival_stop objectForKey:@"name"];
@@ -107,6 +139,9 @@ NSMutableArray *steps;
             busrouteDetailCell.startbustop_name.text = [step.transit_details.departure_stop objectForKey:@"name"];
             busrouteDetailCell.endbustop_name.text = [step.transit_details.arrival_stop objectForKey:@"name"];
             
+            busrouteDetailCell.bus_number.layer.borderColor = [UIColor blackColor].CGColor;
+            busrouteDetailCell.bus_number.layer.borderWidth = 1.0;
+            busrouteDetailCell.bus_number.text = step.transit_details.line.short_name;
             if([step.transit_details.num_stops intValue]>1){
                 num_stops = @"stops";
             }
@@ -125,6 +160,15 @@ NSMutableArray *steps;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+//    UIStoryboard *mainSb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    ActivityDetailViewController *activityVC = [mainSb instantiateViewControllerWithIdentifier:@"ActivityDetailView"];
+//    if (indexPath.row <= self.localActivities.count) {
+//        activityVC.selectedActivity = self.localActivities[indexPath.row];
+//        
+//        [self.navigationController pushViewController:activityVC animated:YES];
+//        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+//    }
 }
 
 

@@ -54,6 +54,12 @@
 		A3106BBD1B57BD3700FB57D3 /* BusRouteDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3106BBC1B57BD3700FB57D3 /* BusRouteDetailCell.m */; };
 		A3106BBF1B57E3E700FB57D3 /* bus.png in Resources */ = {isa = PBXBuildFile; fileRef = A3106BBE1B57E3E700FB57D3 /* bus.png */; };
 		A3106BC11B57F3B300FB57D3 /* EW.png in Resources */ = {isa = PBXBuildFile; fileRef = A3106BC01B57F3B300FB57D3 /* EW.png */; };
+		A3106BC81B57FE9F00FB57D3 /* BP.png in Resources */ = {isa = PBXBuildFile; fileRef = A3106BC21B57FE9F00FB57D3 /* BP.png */; };
+		A3106BC91B57FE9F00FB57D3 /* CC.png in Resources */ = {isa = PBXBuildFile; fileRef = A3106BC31B57FE9F00FB57D3 /* CC.png */; };
+		A3106BCA1B57FE9F00FB57D3 /* DT.png in Resources */ = {isa = PBXBuildFile; fileRef = A3106BC41B57FE9F00FB57D3 /* DT.png */; };
+		A3106BCB1B57FE9F00FB57D3 /* NE.png in Resources */ = {isa = PBXBuildFile; fileRef = A3106BC51B57FE9F00FB57D3 /* NE.png */; };
+		A3106BCC1B57FE9F00FB57D3 /* NS.png in Resources */ = {isa = PBXBuildFile; fileRef = A3106BC61B57FE9F00FB57D3 /* NS.png */; };
+		A3106BCD1B57FE9F00FB57D3 /* SW.png in Resources */ = {isa = PBXBuildFile; fileRef = A3106BC71B57FE9F00FB57D3 /* SW.png */; };
 		A3E5CEA81B5663C300AE3840 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E5CEA71B5663C300AE3840 /* MapManager.swift */; };
 		A3E5CEB11B56C02B00AE3840 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E5CEAF1B56C02B00AE3840 /* TestViewController.m */; };
 		A3E5CEB21B56C02B00AE3840 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E5CEB01B56C02B00AE3840 /* TestViewController.xib */; };
@@ -139,6 +145,12 @@
 		A3106BBC1B57BD3700FB57D3 /* BusRouteDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusRouteDetailCell.m; sourceTree = "<group>"; };
 		A3106BBE1B57E3E700FB57D3 /* bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bus.png; sourceTree = "<group>"; };
 		A3106BC01B57F3B300FB57D3 /* EW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EW.png; sourceTree = "<group>"; };
+		A3106BC21B57FE9F00FB57D3 /* BP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BP.png; sourceTree = "<group>"; };
+		A3106BC31B57FE9F00FB57D3 /* CC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CC.png; sourceTree = "<group>"; };
+		A3106BC41B57FE9F00FB57D3 /* DT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DT.png; sourceTree = "<group>"; };
+		A3106BC51B57FE9F00FB57D3 /* NE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NE.png; sourceTree = "<group>"; };
+		A3106BC61B57FE9F00FB57D3 /* NS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NS.png; sourceTree = "<group>"; };
+		A3106BC71B57FE9F00FB57D3 /* SW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SW.png; sourceTree = "<group>"; };
 		A3E5CEA61B5663C200AE3840 /* RouteMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RouteMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		A3E5CEA71B5663C300AE3840 /* MapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		A3E5CEAE1B56C02B00AE3840 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
@@ -323,6 +335,12 @@
 		A3106BA71B57937400FB57D3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				A3106BC21B57FE9F00FB57D3 /* BP.png */,
+				A3106BC31B57FE9F00FB57D3 /* CC.png */,
+				A3106BC41B57FE9F00FB57D3 /* DT.png */,
+				A3106BC51B57FE9F00FB57D3 /* NE.png */,
+				A3106BC61B57FE9F00FB57D3 /* NS.png */,
+				A3106BC71B57FE9F00FB57D3 /* SW.png */,
 				A3106BC01B57F3B300FB57D3 /* EW.png */,
 				A3106BBE1B57E3E700FB57D3 /* bus.png */,
 				A3106BB41B57B83500FB57D3 /* walk.png */,
@@ -430,21 +448,27 @@
 			files = (
 				6D12952A1B5572EC00FCDA1A /* List Filled-32.png in Resources */,
 				6D22CADE1B5532F90007A3CD /* steering_wheel@3x.png in Resources */,
+				A3106BCC1B57FE9F00FB57D3 /* NS.png in Resources */,
 				6D22CADD1B5532F90007A3CD /* steering_wheel@2x.png in Resources */,
 				6D22CAB71B5513E80007A3CD /* Main.storyboard in Resources */,
+				A3106BCD1B57FE9F00FB57D3 /* SW.png in Resources */,
 				6D22CAD31B551CE70007A3CD /* Restaurant Building Filled-25.png in Resources */,
 				6D22CADC1B5532F90007A3CD /* steering_wheel.png in Resources */,
 				A3106BBF1B57E3E700FB57D3 /* bus.png in Resources */,
 				6D22CAE01B5534190007A3CD /* More Filled-25.png in Resources */,
 				6D22CABC1B5513E80007A3CD /* LaunchScreen.xib in Resources */,
+				A3106BCB1B57FE9F00FB57D3 /* NE.png in Resources */,
 				6D22CAD71B551F160007A3CD /* Pin.png in Resources */,
+				A3106BC91B57FE9F00FB57D3 /* CC.png in Resources */,
 				6D22CAD81B551F160007A3CD /* Pin@2x.png in Resources */,
 				A3106BB51B57B83500FB57D3 /* walk.png in Resources */,
 				A3E5CEB81B56C13E00AE3840 /* PageMenuViewContoller.xib in Resources */,
 				A3106BC11B57F3B300FB57D3 /* EW.png in Resources */,
 				6D22CAE21B5534BC0007A3CD /* More-25.png in Resources */,
+				A3106BC81B57FE9F00FB57D3 /* BP.png in Resources */,
 				6D22CAB91B5513E80007A3CD /* Images.xcassets in Resources */,
 				A3E5CEB21B56C02B00AE3840 /* TestViewController.xib in Resources */,
+				A3106BCA1B57FE9F00FB57D3 /* DT.png in Resources */,
 				A3106BB71B57B92000FB57D3 /* subway.png in Resources */,
 				6D22CAD41B551CE70007A3CD /* School Crossing Patrol Filled-25.png in Resources */,
 			);

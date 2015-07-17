@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 com.acps. All rights reserved.
 //
 
-#define kDirectionsURL @"http://maps.googleapis.com/maps/api/directions/json?"
+#define kDirectionsURL @"https://maps.googleapis.com/maps/api/directions/json?"
 
 
 #import "RouteController.h"
@@ -53,8 +53,6 @@ static AFHTTPRequestOperationManager* requestManager;
 + (void)getPolylineWithLocations:(NSArray *)locations travelMode:(TravelMode)travelMode success:(SuccessBlock)success fail:(FailBlock)fail{
       AFHTTPRequestOperationManager* manager = [RouteController sharedRequestManager];
     
-
-    NSLog(@"In");
     NSUInteger locationsCount = [locations count];
     
     if (locationsCount < 2) return;
@@ -95,6 +93,8 @@ static AFHTTPRequestOperationManager* requestManager;
             [url appendString:@"&mode=driving"];
             break;
     }
+    
+    [url appendString:@"&transit_mode=subway&key=AIzaSyCW4zNkd9j2hysSQOAfU-SElISmBzcJr7E"];
     
     url = [NSMutableString stringWithString:[url stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
     

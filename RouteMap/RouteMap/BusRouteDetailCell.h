@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *startbustop_name;
 @property (weak, nonatomic) IBOutlet UILabel *endbustop_name;
 @property (weak, nonatomic) IBOutlet UILabel *stops_time;
+@property (weak, nonatomic) IBOutlet UILabel *bus_number;
 
 @end
 

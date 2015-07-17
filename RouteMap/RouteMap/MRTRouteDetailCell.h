@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *html_instructions;
 @property (weak, nonatomic) IBOutlet UILabel *stops_mins;
 @property (weak, nonatomic) IBOutlet UILabel *endstation_name;
+@property (weak, nonatomic) IBOutlet UIImageView *mrtline_image;
 
 @end
